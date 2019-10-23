@@ -44,7 +44,7 @@ table {
 
 .mainDetails {
 	padding: 25px 35px;
-	border-bottom: 2px solid #cf8a05;
+	border-bottom: 2px solid #0826a7;
 	background: #ededed;
 }
 
@@ -54,7 +54,7 @@ table {
 .footerDetails {
 	clear: both;
 	padding: 10px 35px;
-	border-top: 2px solid #cf8a05;
+	border-top: 2px solid #0826a7;
 	background: #ededed;
 }
 
@@ -80,7 +80,7 @@ table {
 }
 
 body {
-    background: #181818;
+    background: rgb(208, 211, 214);
     color: #424242;
 	font-family: "Times New Roman";
 /*	background-color: #3f3f3f;
@@ -96,7 +96,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-    color: #e45e1e;
+    color: #5f64b3;
 	font-family: Arial, 'IM Fell French Canon SC', serif;
 }
 
@@ -189,13 +189,13 @@ a:link {
 }
 
 ::-moz-selection {
-    background: #e45e1e;
+    background: #56a0bf;
     color: #fff;
     text-shadow: none;
 }
 
 ::selection {
-    background: #e45e1e;
+    background: #56a0bf;
     color: #fff;
     text-shadow: none;
 }
