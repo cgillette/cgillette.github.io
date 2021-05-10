@@ -44,8 +44,12 @@ table {
 
 .mainDetails {
 	padding: 25px 35px;
-	border-bottom: 2px solid #cf8a05;
-	background: #ededed;
+	border-bottom: 4px solid rgb(124, 133, 135);
+	background-image:url('header.svg');
+	background-size:cover;
+	display: flex;
+	flex-flow: row wrap;
+	align-content: space-between;
 }
 
 .tools {
@@ -54,7 +58,7 @@ table {
 .footerDetails {
 	clear: both;
 	padding: 10px 35px;
-	border-top: 2px solid #cf8a05;
+	border-top: 4px solid rgb(124, 133, 135);
 	background: #ededed;
 	text-align: center;
 	font-size:.9em;
@@ -82,7 +86,7 @@ table {
 }
 
 body {
-    background: #181818;
+    background: #a6a6a6;
     color: #424242;
 	font-family: "Times New Roman";
 /*	background-color: #3f3f3f;
@@ -98,7 +102,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-    color: #e45e1e;
+  color: rgb(71, 104, 98);
 	font-family: Arial, 'IM Fell French Canon SC', serif;
 }
 
@@ -137,13 +141,15 @@ a:link {
     -webkit-tap-highlight-color: #e45e1e;
 }
 
-#name {
-	float: left;
+#logo {
+	width: 80px;
+	margin-right: 20px;
 }
 
 #name h1 {
 	margin:0px;
 	padding-top:.5em;
+	color: white;
 }
 
 #linkedInQR {
@@ -151,12 +157,11 @@ a:link {
 	background-repeat:no-repeat;
 	width: 70px;
 	height: 70px;
-	float: right;
 	margin-left: 10px;
 }
 
 #contactDetails {
-	float: right;
+	margin-left: auto;
 }
 
 #contactDetails li {
@@ -170,11 +175,11 @@ a:link {
 }
 
 #contactDetails ul li {
-	color: #444;
+	color: white;
 }
 
 #contactDetails ul li a, a[href^=tel] {
-	color: #444; 
+	color: white;
 	-webkit-transition: all .3s ease-in;
 	-moz-transition: all .3s ease-in;
 	-o-transition: all .3s ease-in;
@@ -183,7 +188,7 @@ a:link {
 }
 
 #contactDetails ul li a:hover { 
-	color: #cf8a05;
+	color: #444;
 }
 
 #patents p {
@@ -494,7 +499,7 @@ p.email {
 	.patent .title {
 		float:none;
 	}
-	
+
 	.addjob .title, .addjob .employer, .addjob .duration,
 	.school .title, .school .employer, .school .duration {
         float: none;
@@ -503,7 +508,7 @@ p.email {
 	.addjob .location, .school .location {
 		display:none;
 	}
-	
+
 	.patent .title, .patent .duration {
 		float:none;
 	}
@@ -514,26 +519,26 @@ p.email {
 }
 
 @media screen and (max-width: 480px) {
-    .multi-column {
-        -moz-column-count: 1;
-        -moz-column-gap: 0;
-        -webkit-column-count: 1;
-        -webkit-column-gap: 0;
-        column-count: 1;
-        column-gap: 0;
-    }
+	.multi-column {
+			-moz-column-count: 1;
+			-moz-column-gap: 0;
+			-webkit-column-count: 1;
+			-webkit-column-gap: 0;
+			column-count: 1;
+			column-gap: 0;
+	}
 
-    .job .title,.school .title, .job .employer {
-        float: none;
-    }
+	.job .title,.school .title, .job .employer {
+			float: none;
+	}
 
-    .job .location {
-        display: none;
-    }
-	
-    .job .duration {
-        float: none;
-    };
+	.job .location {
+			display: none;
+	}
+
+	.job .duration {
+			float: none;
+	};
 }
 
 @media print {
@@ -561,7 +566,7 @@ p.email {
 	}
 	
 	.mainDetails {
-		padding: 0px 0px 1em 0px;
+		padding: 1em;
 	}	
 	
 	body {
@@ -632,47 +637,58 @@ p.email {
 
 }
 
-@media all and (max-width: 700px) {
-	#name, #contactDetails {
+@media all and (max-width: 780px) {
+	#logo {
+		display: none;
+	}
+
+	.mainDetails {
+		background-image: url('header_small.svg');
+		background-color: #a6a6a6;
+	}
+
+	#cv {
+		min-width: 280px;
+	}
+
+	.sectionTitle, .sectionContent {
 		float: none;
+		width: 100%;
+	}
+
+	.sectionTitle {
+		margin-left: -2px;
+		font-size: 1.25em;
+	}
+
+	.keySkills {
+		-moz-column-count:2;
+		-webkit-column-count:2;
+		column-count:2;
+	}
+
+	#linkedInQR {
+		margin:auto;
+		margin-top:10px;
+	}
+}
+
+@media all and (max-width: 700px) {
+	#logo {
+		margin: auto;
+	}
+
+	#name, #contactDetails {
 		width: 100%;
 		text-align: center;
 	}
-	
+
 	#contactDetails {
 		float: none;
 	}
 
 	#contactDetails li {
 		text-align: center;
-	}
-	
-	#linkedInQR {
-		float: none;
-        margin:auto;
-        margin-top:10px;		
-    }
-}
-
-@media all and (max-width: 780px) {
-	#cv {
-		min-width: 280px;
-	}
-	
-	.sectionTitle, .sectionContent {
-		float: none;
-		width: 100%;
-	}
-	
-	.sectionTitle {
-		margin-left: -2px;
-		font-size: 1.25em;
-	}
-	
-	.keySkills {
-		-moz-column-count:2;
-		-webkit-column-count:2;
-		column-count:2;
 	}
 }
 
@@ -682,11 +698,12 @@ p.email {
 		min-width: 280px;
 		margin:0px;
 	}
-	
+
 	.mainDetails {
 		padding: 15px 15px;
+		background-image:url('header_small.svg');
 	}
-	
+
 	section {
 		padding: 15px 0 0;
 	}
